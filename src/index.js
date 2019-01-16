@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import rootReducer from './reducers'
+import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
 import Todo from './components/App';
 

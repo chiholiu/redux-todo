@@ -7,7 +7,7 @@ const reducers = (state = [], action) => {
                     id: action.id,
                     text: action.text,
                     completed: false
-                }
+                }, console.log('this ' + action.text)
             ]
         case 'TODDLE_TODO':
             return state.map(
