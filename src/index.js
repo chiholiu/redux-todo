@@ -1,35 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Todo from './Todo';
+import rootReducer from './reducers'
 import * as serviceWorker from './serviceWorker';
+import Todo from './components/App';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-const reducers = (state = [], action) => {
-    switch(action.type) {
-        case 'ADD_TODO':
-            return [
-                ...state,
-                {
-                    id: action.id,
-                    text: action.text,
-                    completed: false
-                }
-            ]
-        case 'TODDLE_TODO':
-            return state.map(
-                todo => 
-                    todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-            )
-        default: 
-            return state
-    }
-}
-
-
-const store = createStore(reducers);
+const store = createStore(rootReducer);
 
 const App = () => (
     <Provider store={store}>
