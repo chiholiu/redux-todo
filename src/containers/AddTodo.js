@@ -11,7 +11,7 @@ const Todo = ({ dispatch }) => {
         if(!input.value.trim()) {
             return
         }
-        dispatch(addTodo(input.value), console.log(input.value))
+        dispatch(addTodo(input.value))
         input.value = ''
     }}>
         <label>

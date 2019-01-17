@@ -2,8 +2,15 @@ import { connect } from 'react-redux';
 import { toggleTodo } from '../actions';
 import TodoList from '../components/TodoList';
 
+const getTodos = (todos) => {
+    switch (todos) {
+        default:
+          return todos
+      }
+}
+
 const mapStateToProps = state => ({
-    todos: state.todos
+    todos: getTodos(state.todos)
 })
 
 const mapDispatchToProps = dispatch => ({
